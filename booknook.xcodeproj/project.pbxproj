@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F206166D2CDC4A5E00A7C8B2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = F206166C2CDC4A5E00A7C8B2 /* Book.swift */; };
+		F206166F2CDC4A7F00A7C8B2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F206166E2CDC4A7F00A7C8B2 /* DataManager.swift */; };
+		F20616722CDC4ADF00A7C8B2 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20616712CDC4ADF00A7C8B2 /* BookListView.swift */; };
+		F20616742CDC4B1A00A7C8B2 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20616732CDC4B1A00A7C8B2 /* BookDetailView.swift */; };
 		F2AD8F5D2CDC48370079D6DC /* booknookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AD8F5C2CDC48370079D6DC /* booknookApp.swift */; };
 		F2AD8F5F2CDC48370079D6DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AD8F5E2CDC48370079D6DC /* ContentView.swift */; };
 		F2AD8F612CDC48380079D6DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2AD8F602CDC48380079D6DC /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F206166C2CDC4A5E00A7C8B2 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		F206166E2CDC4A7F00A7C8B2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F20616712CDC4ADF00A7C8B2 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
+		F20616732CDC4B1A00A7C8B2 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		F2AD8F592CDC48370079D6DC /* booknook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = booknook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2AD8F5C2CDC48370079D6DC /* booknookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = booknookApp.swift; sourceTree = "<group>"; };
 		F2AD8F5E2CDC48370079D6DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,9 +80,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F20616682CDC4A2300A7C8B2 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F20616712CDC4ADF00A7C8B2 /* BookListView.swift */,
+				F20616732CDC4B1A00A7C8B2 /* BookDetailView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		F206166A2CDC4A3A00A7C8B2 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F206166C2CDC4A5E00A7C8B2 /* Book.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		F206166B2CDC4A3F00A7C8B2 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				F206166E2CDC4A7F00A7C8B2 /* DataManager.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		F2AD8F502CDC48370079D6DC = {
 			isa = PBXGroup;
 			children = (
+				F206166B2CDC4A3F00A7C8B2 /* data */,
+				F206166A2CDC4A3A00A7C8B2 /* models */,
+				F20616682CDC4A2300A7C8B2 /* views */,
 				F2AD8F5B2CDC48370079D6DC /* booknook */,
 				F2AD8F6D2CDC48390079D6DC /* booknookTests */,
 				F2AD8F772CDC48390079D6DC /* booknookUITests */,
@@ -260,7 +296,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2AD8F5F2CDC48370079D6DC /* ContentView.swift in Sources */,
+				F206166F2CDC4A7F00A7C8B2 /* DataManager.swift in Sources */,
+				F20616722CDC4ADF00A7C8B2 /* BookListView.swift in Sources */,
 				F2AD8F5D2CDC48370079D6DC /* booknookApp.swift in Sources */,
+				F20616742CDC4B1A00A7C8B2 /* BookDetailView.swift in Sources */,
+				F206166D2CDC4A5E00A7C8B2 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
