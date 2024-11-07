@@ -11,6 +11,9 @@
 		F206166F2CDC4A7F00A7C8B2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F206166E2CDC4A7F00A7C8B2 /* DataManager.swift */; };
 		F20616722CDC4ADF00A7C8B2 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20616712CDC4ADF00A7C8B2 /* BookListView.swift */; };
 		F20616742CDC4B1A00A7C8B2 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20616732CDC4B1A00A7C8B2 /* BookDetailView.swift */; };
+		F20616762CDC55AF00A7C8B2 /* GoogleBooksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20616752CDC55AF00A7C8B2 /* GoogleBooksAPI.swift */; };
+		F20616782CDC55E300A7C8B2 /* BookSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20616772CDC55E300A7C8B2 /* BookSearchView.swift */; };
+		F206167B2CDC5CF700A7C8B2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F206167A2CDC5CF700A7C8B2 /* Info.plist */; };
 		F2AD8F5D2CDC48370079D6DC /* booknookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AD8F5C2CDC48370079D6DC /* booknookApp.swift */; };
 		F2AD8F5F2CDC48370079D6DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AD8F5E2CDC48370079D6DC /* ContentView.swift */; };
 		F2AD8F612CDC48380079D6DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2AD8F602CDC48380079D6DC /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		F206166E2CDC4A7F00A7C8B2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		F20616712CDC4ADF00A7C8B2 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
 		F20616732CDC4B1A00A7C8B2 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		F20616752CDC55AF00A7C8B2 /* GoogleBooksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPI.swift; sourceTree = "<group>"; };
+		F20616772CDC55E300A7C8B2 /* BookSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchView.swift; sourceTree = "<group>"; };
+		F206167A2CDC5CF700A7C8B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2AD8F592CDC48370079D6DC /* booknook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = booknook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2AD8F5C2CDC48370079D6DC /* booknookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = booknookApp.swift; sourceTree = "<group>"; };
 		F2AD8F5E2CDC48370079D6DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 			children = (
 				F20616712CDC4ADF00A7C8B2 /* BookListView.swift */,
 				F20616732CDC4B1A00A7C8B2 /* BookDetailView.swift */,
+				F20616772CDC55E300A7C8B2 /* BookSearchView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -101,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				F206166E2CDC4A7F00A7C8B2 /* DataManager.swift */,
+				F20616752CDC55AF00A7C8B2 /* GoogleBooksAPI.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 		F2AD8F502CDC48370079D6DC = {
 			isa = PBXGroup;
 			children = (
+				F206167A2CDC5CF700A7C8B2 /* Info.plist */,
 				F206166B2CDC4A3F00A7C8B2 /* data */,
 				F206166A2CDC4A3A00A7C8B2 /* models */,
 				F20616682CDC4A2300A7C8B2 /* views */,
@@ -271,6 +280,7 @@
 			files = (
 				F2AD8F652CDC48380079D6DC /* Preview Assets.xcassets in Resources */,
 				F2AD8F612CDC48380079D6DC /* Assets.xcassets in Resources */,
+				F206167B2CDC5CF700A7C8B2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +308,10 @@
 				F2AD8F5F2CDC48370079D6DC /* ContentView.swift in Sources */,
 				F206166F2CDC4A7F00A7C8B2 /* DataManager.swift in Sources */,
 				F20616722CDC4ADF00A7C8B2 /* BookListView.swift in Sources */,
+				F20616782CDC55E300A7C8B2 /* BookSearchView.swift in Sources */,
 				F2AD8F5D2CDC48370079D6DC /* booknookApp.swift in Sources */,
 				F20616742CDC4B1A00A7C8B2 /* BookDetailView.swift in Sources */,
+				F20616762CDC55AF00A7C8B2 /* GoogleBooksAPI.swift in Sources */,
 				F206166D2CDC4A5E00A7C8B2 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +476,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = booknook/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -502,6 +515,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = booknook/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

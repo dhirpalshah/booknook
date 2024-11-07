@@ -1,12 +1,4 @@
-//
-//  BookListView.swift
-//  booknook
-//
-//  Created by Dhirpal Shah on 11/6/24.
-//
-
 import SwiftUI
-import Foundation
 
 struct BookListView: View {
     @State private var books: [Book] = DataManager.shared.loadBooks()
@@ -16,33 +8,49 @@ struct BookListView: View {
             List {
                 ForEach(books) { book in
                     NavigationLink(destination: BookDetailView(book: book)) {
-                        Text(book.title)
+                        HStack {
+                            Text(book.title)
+                                .font(.body)
+                            Spacer()
+                            Text("\(book.rating)/5")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                        }
                     }
                 }
+                .onDelete(perform: deleteBook)
             }
             .navigationTitle("BookNook")
             .toolbar {
-                            #if os(iOS)
-                            ToolbarItem(placement: .navigationBarTrailing) {
-                                Button(action: addBook) {
-                                    Image(systemName: "plus")
-                                }
-                            }
-                            #else
-                            ToolbarItem {
-                                Button(action: addBook) {
-                                    Image(systemName: "plus")
-                                }
-                            }
-                            #endif
-                        }
+                #if os(iOS)
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: addBook) {
+                        Image(systemName: "plus")
+                    }
+                }
+                #else
+                ToolbarItem {
+                    Button(action: addBook) {
+                        Image(systemName: "plus")
+                    }
+                }
+                #endif
+            }
         }
     }
     
     func addBook() {
-        // For now, you can add a placeholder book
+        let searchView = BookSearchView { selectedBook in
+            books.append(selectedBook)
+            DataManager.shared.saveBooks(books)
+        }
         let newBook = Book(title: "Sample Book", author: "Author Name", genre: "Genre", rating: 5)
         books.append(newBook)
+        DataManager.shared.saveBooks(books)
+    }
+    
+    func deleteBook(at offsets: IndexSet) {
+        books.remove(atOffsets: offsets)
         DataManager.shared.saveBooks(books)
     }
 }
