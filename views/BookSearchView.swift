@@ -12,14 +12,17 @@ struct BookSearchView: View {
     @State private var query = ""
     @State private var searchResults: [Book] = []
     @Environment(\.presentationMode) var presentationMode
+    let api = ISBNdbAPI()  // Initialize the ISBNdbAPI
     var onBookSelected: (Book) -> Void
 
     var body: some View {
         VStack {
-            TextField("Search for a book...", text: $query, onCommit: searchBooks)
+            // Search Bar
+            TextField("Search for a book...", text: $query, onCommit: performSearch)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
 
+            // List of Search Results
             List(searchResults) { book in
                 Button(action: {
                     onBookSelected(book)
@@ -38,9 +41,10 @@ struct BookSearchView: View {
         .navigationTitle("Search Books")
     }
     
-    func searchBooks() {
-        GoogleBooksAPI().searchBooks(query: query) { books in
-            searchResults = books
+    // Call the searchBooks function from ISBNdbAPI
+    func performSearch() {
+        api.searchBooks(query: query) { books in
+            searchResults = books  // Update the results to show in the list
         }
     }
 }
